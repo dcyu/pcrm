@@ -1,0 +1,9 @@
+header
+  article
+    .logo
+      h1.t-bold Daniel's Personal Relationship Manager
+
+section#main
+  = outlet
+
+footer

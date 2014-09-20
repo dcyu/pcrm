@@ -1,0 +1,25 @@
+outlet
+
+unless isEditing
+  article#person
+    h3
+      link-to 'Edit Person' 'person.edit' model classNames='edit'
+      a.delete href='#' click="delete" delete
+
+    form
+      fieldset
+        dl
+          dt: label First Name:
+          dd: model.first_name
+
+        dl
+          dt: label Last Name:
+          dd: model.last_name
+
+        dl
+          dt: label Email:
+          dd: model.email
+
+        dl
+          dt: label Description:
+          dd: model.description

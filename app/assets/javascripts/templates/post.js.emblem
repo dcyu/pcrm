@@ -1,0 +1,22 @@
+article#post
+  h1= model.title
+
+  p
+    ' Title:
+    model.title
+
+  p
+    ' Body:
+    model.body
+
+  p
+    label Status:
+    '
+    view Ember.Select content=App.Post.STATUSES value=model.status
+
+  p
+    input type='submit' value='Save Changes' click='saveChanges'
+    if isDirty
+      .unsaved unsaved changes
+    if isSaving
+      .saving saving...

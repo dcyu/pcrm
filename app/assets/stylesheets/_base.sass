@@ -1,0 +1,149 @@
+html
+  width: 100%
+  height: 100%
+
+#ember-app
+  padding: 0 100px
+
+a
+  text-decoration: none
+  color: $purple
+  font-size: 1em
+  display: inline-block
+  +transition(0.5s) 
+  &:hover
+    color: $turquoise
+  &.inverted
+    color: $turquoise
+    &:hover
+      color: $purple
+
+.inverted
+  color: $turquoise
+  +transition(0.5s) 
+  &:hover
+    color: $purple
+
+b
+  line-height: 1.5em
+
+body 
+  font-size: 14px
+  font-family: $sans
+  min-height: 100%
+  width: 100%
+  position: absolute
+  top: 0
+  color: $dark_grey
+  border-top: 10px solid $purple
+
+.clear
+  clear: both
+
+.clearfix:after
+  visibility: hidden
+  display: block
+  content: ""
+  clear: both
+  height: 0
+
+dd, dt
+  display: inline-block
+
+dl
+  height: 70px
+
+dt
+  width: 150px
+
+form
+  border: none
+  input
+  fieldset
+    border: none
+
+  label
+    font-size: 1.2em
+    display: block
+    text-align: left
+    font-weight: bold
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  line-height: 1.3em
+
+h1
+  font-size: 2em
+
+h2
+  font-size: 1.5em
+  margin: 0
+  padding: 1em
+  text-align: center
+
+img
+  border: 0px
+
+input, select, textarea
+  margin: 1em 0
+  padding: 0.4em
+  &[type=checkbox]
+    display: inline-block
+    margin-right: 20px
+    width: 10px
+    &:hover
+      cursor: pointer
+    &.is-hidden
+      display: none
+  &[type=submit]
+    display: block
+    color: #fff  
+    background-color: $purple
+  &[type=file]
+    width: 500px
+    font-size: 1.2em
+    color: $purple
+    display: block
+    line-height: 1em
+    
+#notice
+  color: $green
+  padding: 0.5em
+#error
+  color: $red
+  padding: 0.5em
+ 
+p
+  font-size: 1em
+  line-height: 1.4em
+  margin: 0
+
+select
+  width: 338px
+  background: #fff
+  &:hover
+    cursor: pointer
+
+strong
+  display: block
+
+table
+  th
+    padding-right: 40px
+    padding-bottom: 0.5em
+    text-align: left
+  td
+    padding-right: 50px
+    text-align: left
+  tr
+    border-bottom: 2px solid #eee
+    &:nth-of-type(odd), &.light
+      background-color: #fff
+    &:nth-of-type(even), &.dark
+      background-color: #eee
+  
+ul
+  list-style-type: none
+
+li
+  font-size: 1em

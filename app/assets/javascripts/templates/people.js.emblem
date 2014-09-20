@@ -1,0 +1,12 @@
+article#people
+  h1 People:
+  ul
+    each person in controller
+      li
+        h2.is-ta-left
+          link-to 'person' person tagName="a"
+            person.first_name
+            '
+            person.last_name
+
+outlet

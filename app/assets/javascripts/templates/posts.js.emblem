@@ -1,0 +1,9 @@
+article#posts
+  h1 Posts
+  ul
+    each   post in controller
+      li
+        link-to 'post' post tagName="a"
+          post.title
+
+outlet
