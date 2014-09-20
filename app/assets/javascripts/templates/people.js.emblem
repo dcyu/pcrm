@@ -1,5 +1,6 @@
 article#people
-  h1 People:
+  h1 People
+  link-to 'people.new' | Add New Person
   ul
     each person in controller
       li

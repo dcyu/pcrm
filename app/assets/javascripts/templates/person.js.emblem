@@ -4,6 +4,7 @@ unless isEditing
   article#person
     h3
       link-to 'Edit Person' 'person.edit' model classNames='edit'
+      ' |
       a.delete href='#' click="delete" delete
 
     form

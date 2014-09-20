@@ -1,0 +1,19 @@
+article#person
+  h1 New Person
+
+  form
+    fieldset
+      dl
+        dt: label First Name:
+        dd: view Ember.TextField value=fields.first_name
+
+      dl
+        dt: label Last Name:
+        dd: view Ember.TextField value=fields.last_name
+
+      dl
+        dt: label Email:
+        dd: view Ember.TextField value=fields.email
+
+    fieldset.actions
+      input type='submit' value='Create Person' click="createPerson"

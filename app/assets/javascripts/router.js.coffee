@@ -5,6 +5,7 @@ App.Router.map ->
     @resource 'post', path: '/posts/:id'
 
   @resource 'people', path: '/', ->
+    @route 'new'
     @resource 'person', path: '/people/:id', ->
       @route 'edit'
 
