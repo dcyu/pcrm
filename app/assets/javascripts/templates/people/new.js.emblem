@@ -1,6 +1,9 @@
 article#person
   h1 New Person
 
+  if showError
+    .error People must have a first and last name.
+
   form
     fieldset
       dl

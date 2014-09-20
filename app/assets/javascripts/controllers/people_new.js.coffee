@@ -1,8 +1,12 @@
 App.PeopleNewController = Ember.Controller.extend
+  
 
   actions:
-
     createPerson: ->
-      person = @store.createRecord 'person', @get('fields')
-      person.save().then =>
-        @transitionToRoute 'person', person
+      fields = @get('fields')
+      if App.Person.valid(fields)
+        person = @store.createRecord 'person', fields
+        person.save().then (person) =>
+          @transitionToRoute 'person', person
+      else
+        @set 'showError', true
