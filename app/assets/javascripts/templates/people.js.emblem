@@ -1,13 +1,18 @@
-article#people
-  h1 People
-  link-to 'people.new' | Add New Person
-  ul
-    each person in controller
-      li
-        h2.is-ta-left
-          link-to 'person' person tagName="a"
-            person.first_name
-            '
-            person.last_name
+.row-fluid
+  .span2
+    #people
+      h3 People
+      ul
+        each person in controller
+          li
+            link-to 'person' person tagName="a"
+              person.first_name
+              '
+              person.last_name
 
-outlet
+      p
+        link-to 'people.new' | Add New Person
+
+  
+  .span10
+    outlet

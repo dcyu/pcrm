@@ -3,24 +3,32 @@ outlet
 unless isEditing
   article#person
     h3
-      link-to 'Edit Person' 'person.edit' model classNames='edit'
+      model.full_name
+
+    p
+      link-to 'Edit ' 'person.edit' model classNames='edit'
       ' |
-      a.delete href='#' click="delete" delete
+      a.delete href='#' click="delete" Delete
 
-    form
-      fieldset
-        dl
-          dt: label First Name:
-          dd: model.first_name
 
-        dl
-          dt: label Last Name:
-          dd: model.last_name
-
-        dl
-          dt: label Email:
-          dd: model.email
-
-        dl
-          dt: label Description:
-          dd: model.description
+    .info
+      p
+        strong First Name: 
+        span 
+          model.first_name
+      
+      p
+        strong Last Name: 
+        span 
+          model.last_name
+      
+      p
+        strong Email:  
+        span 
+          model.email
+      
+      p
+        strong Description: 
+        br
+        span
+          model.description

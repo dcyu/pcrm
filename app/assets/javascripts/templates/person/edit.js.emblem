@@ -1,6 +1,6 @@
 article#person
-  h1
-    model.fullName
+  h3
+    model.full_name
 
   form
     fieldset
@@ -21,5 +21,7 @@ article#person
         dd: view Ember.TextArea value=model.description
 
     fieldset.actions
-      input type='submit' value='Save Changes' click="saveChanges"
-      a.cancel href="#" click="cancel" cancel
+      input type='submit' class='btn' value='Save Changes' click="saveChanges"
+      p
+        br
+        a.cancel href="#" click="cancel" Cancel

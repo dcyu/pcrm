@@ -1,9 +1,23 @@
-header
-  article
-    .logo
-      h1.t-bold Daniel's Personal Relationship Manager
+.navbar.navbar-inverse
+  .navbar-inner
+    .container
+      a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand href="#" Personal Relationship Manager
+      .nav-collapse.collapse
+        ul.nav
+          / li.active
+          /   a href="#" Home
+          / li
+          /   a href="#" About
 
-section#main
+.container-fluid
   = outlet
+
+
+      h2 About
+
 
 footer

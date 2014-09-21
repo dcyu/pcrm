@@ -1,5 +1,5 @@
 article#person
-  h1 New Person
+  h3 New Person
 
   if showError
     .error People must have a first and last name.
@@ -18,5 +18,9 @@ article#person
         dt: label Email:
         dd: view Ember.TextField value=fields.email
 
+      dl
+        dt: label Description:
+        dd: view Ember.TextArea value=fields.description
+
     fieldset.actions
-      input type='submit' value='Create Person' click="createPerson"
+      input type='submit' value='Create Person' click="createPerson" class="btn"
